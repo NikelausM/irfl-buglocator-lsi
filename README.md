@@ -33,6 +33,10 @@ Overall, method 2 showed the best performance based on Mean Reciprocal Rank (MRR
 
 ## Launch
 ### Setup
+To prepare a dataset for the application to process, follow the "Getting Started" instructions [here](https://github.com/exatoa/Bench4BL#getting-started).
+
+You must use Python 3 to run our notebook once the data has been processed as instructed in the aforementioned "Getting Started" section.
+
 To run application, first install [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html), then open a new console and enter:
 ```
 jupyter lab
