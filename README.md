@@ -24,15 +24,7 @@ The pre-processing code up to the Markdown heading "More Pre-processing (Team 7)
 
 ## Launch
 ### Setup
-To install necessary virtual environment, in a terminal enter:
-```
-pipenv install
-```
-To activate virtual environment needed to run application, in a terminal enter:
-```
-pipenv shell
-```
-To run application, in the opened shell, enter:
+To run application, first install [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html), then open a new console and enter:
 ```
 jupyter lab
 ```
