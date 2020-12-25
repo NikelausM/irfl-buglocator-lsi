@@ -13,7 +13,9 @@
 - [Contributors](#contributors)
 
 ## Introduction
-There are a number of approaches used for Fault Localization in potential bug files that use Information Retrieval (IR) methods. Common techniques are the BugLocator IR methods that utilize a ranking system based on direct and indirect linking of potential source file fixes. A well known technique such as BugLocator would be a relevant benchmark IR for comparison against Latent Semantic Indexing (LSI). By comparing metrics using two methods developed using BugLocator we can compare new IR methods using LSI to analyze performance based on the accuracy and ranking of correct files. The first approach will be broken into two methods (methods 1 and 2) to facilitate a benchmark for the full implementation of BugLocator (method 2) and LSI (method 3). The observations show a significant improvement from the full implementation due combining multiple approaches to ranking. Compared to single approaches multiple methods of ranking are leveraged for performance boosts. All methods were trained and tested with the bug reports and source files of Java open source project packages. However, Python was used to pre-process the data, as well as create/train/test the models.
+There are a number of approaches used for Fault Localization in potential bug files that use Information Retrieval (IR) methods. Common techniques are the BugLocator IR methods that utilize a ranking system based on direct and indirect linking of potential source file fixes. A well known technique such as BugLocator would be a relevant benchmark IR for comparison against Latent Semantic Indexing (LSI). By comparing evaluation metrics, we were able to analyze performance of these methods. The first approach was broken into two methods (methods 1 and 2) to facilitate a benchmark for the full implementation of BugLocator (method 2) and LSI (method 3).
+
+All methods were trained and tested with the bug reports and source files of Java open source project packages. However, Python was used to pre-process the data, as well as create/train/test the models.
 
 Overall there are three methods that were implemented and evaluated:
 - Method 1: Simplified BugLocator
@@ -21,6 +23,8 @@ Overall there are three methods that were implemented and evaluated:
 - Method 3: Latent Semantic Indexing (LSI) with Singular Value Decomposition (SVD)
 
 The pre-processing code up to the Markdown heading "More Pre-processing (Team 7)" in the Jupyter notebook was provided by a course instructor.
+
+Overall, method 2 showed the best performance based on Mean Reciprocal Rank (MRR) and Mean Average Precision (MAP) evaluation metric values. Visualization for these results are shown in the screenshots section of this readme document.
 
 ## Features
 - Pre-processes bug reports (query results) and source files (query results) to train machine learning algorithms..
@@ -61,8 +65,6 @@ This will open a jupyter lab tab in your default browser, in which you can run t
 <img 
     src="images/results/MAP (Mean Average Precision) Difference (method 3 - method 1) vs. Package.png" 
     alt="MAP (Mean Average Precision) Difference (method 3 - method 1) vs. Package">
-
-Overall, method 2 shows the best performance.
 
 ## Technologies
 - [Python version 3.8.2](https://www.python.org/downloads/release/python-382/)
