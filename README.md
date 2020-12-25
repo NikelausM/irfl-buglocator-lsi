@@ -1,9 +1,9 @@
 <p align="center">
     <img src="./images/icons/python.PNG" alt="Python programming language logo." style="float: left;" width="40%">
-    <img src="./images/icons/spark-logo-hd.png" alt="Spark logo." style="float: right;" width="40%">
+    <img src="./images/icons/1024px-Scikit_learn_logo_small.svg.png" alt="Scikit Learn logo." style="float: right;" width="40%">
 </p>
 
-# Stack Overflow Answer Classifier
+# Information Retrieval for Fault Localization Using LSI (Latent Semantic Indexing) and Other Methods
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -13,16 +13,13 @@
 - [Contributors](#contributors)
 
 ## Introduction
-This is a PySpark project which pre-processes and classifies answers to questions on Stack Overflow as having successfully answered the question or not.
+There are a number of approaches used for Fault Localization in potential bug files that use Information Retrieval (IR) methods. Common techniques are the BugLocator IR methods that utilize a ranking system based on direct and indirect linking of potential source file fixes. A well known technique such as BugLocator would be a relevant benchmark IR using Latent Semantic Indexing (LSI). By comparing metrics using two methods developed using BugLocator we can compare new IR methods using LSI to notice performance based on the accuracy and ranking of correct files. The first approach will be broken into two methods to facilitate a benchmark for the full implementation of BugLocator and LSI. The observations show a significant improvement from the full implementation due combining multiple approaches to ranking. Compared to single approaches multiple methods of ranking are leveraged for performance boosts.
 
-This PySpark application was created for a Big Data final group project for the course [SENG 550: Engineering Large Scale Analytics Systems](https://www.ucalgary.ca/pubs/calendar/current/software-engineering.html#43920).
-
-The dataset used to train and test the application was posted by Chris Dubois of the University of California, Irvine, and can be found [here
-](https://www.ics.uci.edu/~duboisc/stackoverflow/). 
+The pre-processing code up to the Markdown heading "More Pre-processing (Team 7)" in the Jupyter notebook was provided by the course instructor.
 
 ## Features
 - Pre-processes metadata of answer to questions on Stack Overflow.
-- Classifies answers as successfully answering a question based on if it is likely to have a community given score of at least 1.
+- Ranks source files (query results) related to a bug report (query) to find the location of bugs related to the bug report.
 - NumPy style documentation for maintainability and clarity of application.
 
 ## Launch
@@ -42,19 +39,39 @@ jupyter lab
 This will open a jupyter lab tab in your default browser, in which you can run the application.
 
 ## Screenshots
-### Training Data Evaluation Metrics for Each Classifier
-<img src="images/results/training_data_eval_metrics.png" alt="A screenshot of the training data evaluation metrics for the different classifiers.">
+### MRR Results (Mean Reciprocal Rank)
+<img 
+    src="images/results/MRR (Mean Reciprocal Rank) vs. Package.png" 
+    alt="MRR (Mean Reciprocal Rank) vs. Package.">
 
-Explanation for recall being 1: The baseline model is just the mean value of the labels rounded to the nearest integer. In the case of this data set, that mean value rounded up to 1. Therefore, the baseline model will never have a false negative due it always classifying a sample as "relevant" (i.e., the label is always 1). This results in the Recall just being equivalent to TP (Number of true positives) over TP, which is just 1.
+<img 
+    src="images/results/MRR Difference (method 2 - method 1) vs. Package.png" 
+    alt="MRR Difference (method 2 - method 1) vs. Package.">
 
-### Validation Data Evaluation Metrics for Each Classifier
-<img src="images/results/validation_data_eval_metrics.png" alt="A screenshot of the validation data evaluation metrics for the different classifiers.">
+<img 
+    src="images/results/MRR Difference (method 3 - method 1) vs. Package.png" 
+    alt="MRR Difference (method 3 - method 1) vs. Package">
+
+### MAP Results (Mean Average Precision)
+<img 
+    src="images/results/MAP (Mean Average Precision) vs. Package.png" 
+    alt="MAP (Mean Average Precision) vs. Package.">
+
+<img 
+    src="images/results/MAP (Mean Average Precision) Difference (method 2 - method 1) vs. Package.png" 
+    alt="MAP (Mean Average Precision) Difference (method 2 - method 1) vs. Package.">
+
+<img 
+    src="images/results/MAP (Mean Average Precision) Difference (method 3 - method 1) vs. Package.png" 
+    alt="MAP (Mean Average Precision) Difference (method 3 - method 1) vs. Package">
+
+Overall, method 2 shows the best performance.
 
 ## Technologies
 - [Python version 3.8.2](https://www.python.org/downloads/release/python-382/)
-- [PySpark](https://spark.apache.org/docs/latest/api/python/index.html)
 - [NumPy](https://numpy.org/)
 - [Pandas](https://pandas.pydata.org/)
+- [scikit-learn](https://scikit-learn.org/stable/)
 
 ## Contributors
 <table>
@@ -67,20 +84,20 @@ Explanation for recall being 1: The baseline model is just the mean value of the
                 </a>
             </th>
             <th align="center">
-                <a href="https://github.com/umerhassan">
-                    <img alt="umerhassan" src="https://avatars0.githubusercontent.com/u/33638819?s=460&u=295596b81f2dee5d3dbd7527f215498cff66e6f9&v=4" 
+                <a href="https://github.com/ConnorBritton">
+                    <img alt="ConnorBritton" src="https://avatars2.githubusercontent.com/u/28262511?s=460&v=4" 
                          width="100" style="max-width:100%;">
                 </a>
             </th>
             <th align="center">
-                <a href="https://github.com/sohahemmati">
-                    <img alt="NikelausM" src="https://avatars0.githubusercontent.com/u/26145849?s=460&v=4" 
+                <a href="https://www.linkedin.com/in/philip-rea-40a524158/">
+                    <img alt="Philip Rea" src="https://media-exp1.licdn.com/dms/image/C5603AQFB_H106kCYDg/profile-displayphoto-shrink_400_400/0/1581393138166?e=1614211200&v=beta&t=r2uWJ0v-CclsgHV1rGWNQ1UhFF6Z9c64XlYb2Wcww7c" 
                          width="100" style="max-width:100%;">
                 </a>
             </th>
             <th align="center">
-                <a href="https://github.com/Cong-The-Pencil-Coder">
-                    <img alt="NikelausM" src="https://avatars1.githubusercontent.com/u/24983245?s=460&u=a42d4af955c6f28e5b9e306ac6d28874bcc3261f&v=4" 
+                <a href="">
+                    <img alt="Joseph Park" src="" 
                          width="100" style="max-width:100%;">
                 </a>
             </th>
@@ -92,13 +109,13 @@ Explanation for recall being 1: The baseline model is just the mean value of the
         <a href="https://github.com/NikelausM">Nicolas Mora</a>
     </td>
     <td align="center">
-        <a href="https://github.com/umerhassan">Umer Hassan</a>
+        <a href="https://github.com/ConnorBritton">Connor Britton</a>
     </td>
     <td align="center">
-        <a href="https://github.com/sohahemmati">Soha Hemmati</a>
+        <a href="https://www.linkedin.com/in/philip-rea-40a524158/">Philip Rea</a>
     </td>
     <td align="center">
-        <a href="https://github.com/Cong-The-Pencil-Coder">Cong Pham</a>
+        <a href="">Joseph Park</a>
     </td>
 </tr>
 </tbody>
