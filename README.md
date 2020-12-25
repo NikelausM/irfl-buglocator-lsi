@@ -3,7 +3,7 @@
     <img src="./images/icons/1024px-Scikit_learn_logo_small.svg.png" alt="Scikit Learn logo." style="float: right;" width="40%">
 </p>
 
-# Information Retrieval for Fault Localization Using LSI (Latent Semantic Indexing) and Other Methods
+# Information Retrieval for Fault Localization Using Latent Semantic Indexing (LSI) and Other Methods
 
 ## Table of Contents
 - [Introduction](#introduction)
