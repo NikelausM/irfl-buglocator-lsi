@@ -13,9 +13,14 @@
 - [Contributors](#contributors)
 
 ## Introduction
-There are a number of approaches used for Fault Localization in potential bug files that use Information Retrieval (IR) methods. Common techniques are the BugLocator IR methods that utilize a ranking system based on direct and indirect linking of potential source file fixes. A well known technique such as BugLocator would be a relevant benchmark IR using Latent Semantic Indexing (LSI). By comparing metrics using two methods developed using BugLocator we can compare new IR methods using LSI to notice performance based on the accuracy and ranking of correct files. The first approach will be broken into two methods to facilitate a benchmark for the full implementation of BugLocator and LSI. The observations show a significant improvement from the full implementation due combining multiple approaches to ranking. Compared to single approaches multiple methods of ranking are leveraged for performance boosts.
+There are a number of approaches used for Fault Localization in potential bug files that use Information Retrieval (IR) methods. Common techniques are the BugLocator IR methods that utilize a ranking system based on direct and indirect linking of potential source file fixes. A well known technique such as BugLocator would be a relevant benchmark IR using Latent Semantic Indexing (LSI). By comparing metrics using two methods developed using BugLocator we can compare new IR methods using LSI to notice performance based on the accuracy and ranking of correct files. The first approach will be broken into two methods (methods 1 and 2) to facilitate a benchmark for the full implementation of BugLocator and LSI. The observations show a significant improvement from the full implementation due combining multiple approaches to ranking. Compared to single approaches multiple methods of ranking are leveraged for performance boosts.
 
-The pre-processing code up to the Markdown heading "More Pre-processing (Team 7)" in the Jupyter notebook was provided by the course instructor.
+Overall there are three methods that were implemented and evaluated:
+- Method 1: Simplified BugLocator
+- Method 2: Full BugLocator
+- Method 3: Latent Semantic Indexing (LSI) with Singular Value Decomposition (SVD)
+
+The pre-processing code up to the Markdown heading "More Pre-processing (Team 7)" in the Jupyter notebook was provided by a course instructor.
 
 ## Features
 - Pre-processes metadata of answer to questions on Stack Overflow.
