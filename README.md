@@ -23,7 +23,7 @@ Overall there are three methods that were implemented and evaluated:
 The pre-processing code up to the Markdown heading "More Pre-processing (Team 7)" in the Jupyter notebook was provided by a course instructor.
 
 ## Features
-- Pre-processes metadata of answer to questions on Stack Overflow.
+- Pre-processes bug reports (query results) and source files (query results) to train machine learning algorithms..
 - Ranks source files (query results) related to a bug report (query) to find the location of bugs related to the bug report.
 - NumPy style documentation for maintainability and clarity of application.
 
