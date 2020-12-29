@@ -93,8 +93,8 @@ This will open a jupyter lab tab in your default browser, in which you can run t
                 </a>
             </th>
             <th align="center">
-                <a href="https://www.linkedin.com/in/philip-rea-40a524158/">
-                    <img alt="Philip Rea" src="https://media-exp1.licdn.com/dms/image/C5603AQFB_H106kCYDg/profile-displayphoto-shrink_400_400/0/1581393138166?e=1614211200&v=beta&t=r2uWJ0v-CclsgHV1rGWNQ1UhFF6Z9c64XlYb2Wcww7c" 
+                <a href="https://github.com/Philip-Rea">
+                    <img alt="Philip Rea" src="https://avatars3.githubusercontent.com/u/33358579?s=460&v=4" 
                          width="100" style="max-width:100%;">
                 </a>
             </th>
@@ -115,7 +115,7 @@ This will open a jupyter lab tab in your default browser, in which you can run t
         <a href="https://github.com/ConnorBritton">Connor Britton</a>
     </td>
     <td align="center">
-        <a href="https://www.linkedin.com/in/philip-rea-40a524158/">Philip Rea</a>
+        <a href="https://github.com/Philip-Rea">Philip Rea</a>
     </td>
     <td align="center">
         <a href="">Joseph Park</a>
